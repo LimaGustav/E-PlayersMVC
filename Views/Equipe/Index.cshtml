@@ -3,38 +3,54 @@
     ViewData["Title"] = "Equipes";
 }
 
-<form method="POST" action='@Url.Action("Cadastrar")'>
+<div class="cadastro_banner">
+    <h1>cadastro de @ViewData["Title"]</h1>
+</div>
 
-    <label for="">ID</label>
-    <input type="text" name="IdEquipe">
-
-    <label for="">Nome</label>
-    <input type="text" name="Nome">
-
-    <label for="">Imagem</label>
-    <input type="text" name="Imagem">
-
-    <button type="submit">Cadastrar</button>
-
-</form>
-
-<table class="table table-striped table-responsive">
-
-    <thead>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Foto</th>
-    </thead>
-
-    <tbody>
-        @foreach (Equipe equipe in ViewBag.equipes)
-        {
-            <tr>
-                <td>@equipe.IdEquipe</td>
-                <td>@equipe.NomeEquipe</td>
-                <td>@equipe.Imagem</td>
+<section class="cadastro_main">
+    <form class="container_input" method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
+    
+        <div class="container_posicionador">
+            <label class="span_input" for="">ID da Equipe</label>
+            <input class="input_email_cadastro" type="text" name="IdEquipe">
+        </div>
+    
+        <div class="container_posicionador">
+            <label class="span_input" for="">Nome Da Equipe</label>
+            <input class="input_email_cadastro" type="text" name="Nome">
+        </div>
+    
+        <div class="container_posicionador">
+            <span class="span_input">Emblema da Equipe</span>
+            <label class="label_input" for="file">Escolher Imagem</label>
+            <input class="input_file_cadastro" type="file" name="Imagem" id="file">
+        </div>
+    
+        <button class="btn_cadastrar_cadastro" type="submit">Cadastrar</button>
+    
+    </form>
+    
+    <table>
+    
+        <thead class="table_head">
+            <tr class="tr1">
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Foto</th>
             </tr>
-        }
-    </tbody>
-
-</table>
+        </thead>
+    
+        <tbody class="tbody_equipe">
+            @foreach (Equipe equipe in ViewBag.equipes)
+            {
+                <tr class="tr_equipe">
+                    <td class="td_equipe">@equipe.IdEquipe</td>
+                    <td class="td_equipe">@equipe.NomeEquipe</td>
+                    <td class="td_equipe td_foto"><img src="/img/Equipes/@equipe.Imagem" alt="Imagem da equipe @equipe.NomeEquipe" width="50px"></td>
+                    <td class="td_equipe"><a class="excluir" asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe">Excluir</a></td>
+                </tr>
+            }
+        </tbody>
+    
+    </table>
+</section>

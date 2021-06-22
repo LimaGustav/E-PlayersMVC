@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <title>Cadastro Times</title>
+</head>
+<body>
+    <header>
+        <div class="container_header grid">
+
+            <a href="index.html#inicio" target="_parent"><img id="logo" src="assets/logo.svg" alt=""></a>
+        
+            <nav class="nav_header">
+                <a href="index.html#inicio" target="_parent">início</a>
+                <a href="index.html#proximos_jogos" target="_parent">horários</a>
+                <a href="index.html#como_participar" target="_parent">campeonato</a>
+                <a href="">classificações</a>
+                <a href="index.html#noticias" target="_parent">notícias</a>
+            </nav>
+        
+            <div class="burguer">
+                <div class="linha1"></div>
+                <div class="linha2"></div>
+                <div class="linha3"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="cadastro_banner">
+            <h1>cadastro de times</h1>
+        </div>
+
+        <section class="cadastro_main">
+
+            <form class="container_input">
+                <div class="container_posicionador">
+                    <label class="span_input">nome da equipe</label>
+                    <input class="input_email_cadastro" type="email" name="" id="">
+                </div>
+
+                <div class="container_posicionador">
+                    <span class="span_input">emblema</span>
+                    <label for="file" class="label_input">Escolher Imagem</label>
+                    <input class="input_file_cadastro" type="file" name="file" id="file">
+                </div>
+
+                <button class="btn_cadastrar">cadastrar</button>
+            </form>
+
+            <h2>lista de times</h2>
+
+            <table>
+                <tr class="tr1">
+                    <th>nome da equipe</th>
+                    <th>emblema</th>
+                </tr>
+
+                <tr class="tr_normal">
+                    <td>SENAI Cytechs</td>
+                    <td><img src="assets/fla tabela.png" alt=""></td>
+                </tr>
+
+                <tr class="tr_normal">
+                    <td>Flamengo</td>
+                    <td><img src="assets/fla tabela.png" alt=""></td>
+                </tr>
+
+            </table>
+
+        </section>
+    </main>
+
+    <script src="scrip.js"></script>
+
+    <footer class="footer">
+        <iframe class="iframe_footer" src="componentes/footer.html" frameborder="0"></iframe>
+    </footer>
+</body>
+</html>
