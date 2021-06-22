@@ -173,18 +173,20 @@ table {
 
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
-.tbody_equipe {
+.tbody_ {
     display: flex;
     flex-direction: column;
 }
 
-.tr_equipe {
+.tr_ {
     width: 100%;
-    height: 50px;
+    height: 80px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 
     border: 1px solid white;
 }
@@ -196,7 +198,7 @@ table {
     border: 1px solid white;
 }
 
-.td_equipe {
+.td_ {
     width: 50px;
     text-align: center;
 }
@@ -223,6 +225,16 @@ table {
 
 .equipe {
     margin-top: 100px;
+}
+
+@media (max-width: 430px) {
+    .tr1 {
+        width: 67%;
+    }
+
+    .id_equipe {
+        display: none;
+    }
 }
 
 @media (max-width: 352px) {

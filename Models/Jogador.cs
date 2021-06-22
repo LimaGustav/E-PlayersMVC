@@ -13,6 +13,10 @@ namespace E_PlayersMVC.Models
         
         public int IdEquipe { get; set; }
 
+        public string Email { get; set; }
+
+        public string Senha { get; set; }
+
         private const string CAMINHO = "Database/jogador.csv";
         
         public Jogador() {
@@ -20,7 +24,7 @@ namespace E_PlayersMVC.Models
         }
 
         public string PrepararJogador(Jogador j) {
-            return $"{j.IdEquipe};{j.NomeJogador};{j.IdEquipe}";
+            return $"{j.IdEquipe};{j.NomeJogador};{j.IdEquipe};{j.Email};{j.Senha}";
         }
         public void Criar(Jogador j)
         {
@@ -41,6 +45,8 @@ namespace E_PlayersMVC.Models
                 jogador.IdJogador = Int32.Parse(linha[0]);
                 jogador.NomeJogador = linha[1];
                 jogador.IdEquipe = Int32.Parse(linha[2]);
+                jogador.Email = linha[3];
+                jogador.Senha = linha[4];
 
                 jogadores.Add(jogador);
 
