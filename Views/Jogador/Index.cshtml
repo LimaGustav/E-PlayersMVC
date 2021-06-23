@@ -13,27 +13,33 @@
     
         <div class="container_posicionador">
             <label class="span_input" for="">ID</label>
-            <input class="input_email_cadastro" type="text" name="IdJogador">
+            <input class="input_email_cadastro" type="text" name="IdJogador" required>
         </div>
     
         <div class="container_posicionador">
             <label class="span_input" for="">Nome</label>
-            <input class="input_email_cadastro" type="text" name="NomeJogador">
+            <input class="input_email_cadastro" type="text" name="NomeJogador" required>
         </div>
     
         <div class="container_posicionador">
-            <label class="span_input" for="">Id equipe</label>
-            <input class="input_email_cadastro" type="text" name="EquipeJogador">
+            <label class="span_input" for="">Equipe</label>
+            <select class="input_email_cadastro" name="EquipeJogador" id="">
+                <option value="0" disabled selected>Selecione</option>
+                @foreach (var item in ViewBag.Equipes)
+                {
+                    <option value="@item.IdEquipe">@item.NomeEquipe</option>
+                }
+            </select>
         </div>
 
         <div class="container_posicionador">
             <label class="span_input" for="">Email</label>
-            <input class="input_email_cadastro" type="email" name="EmailJogador">
+            <input class="input_email_cadastro" type="email" name="EmailJogador" required>
         </div>
 
         <div class="container_posicionador">
             <label class="span_input" for="">Senha</label>
-            <input class="input_email_cadastro" type="password" name="SenhaJogador">
+            <input class="input_email_cadastro" type="password" name="SenhaJogador" required>
         </div>
     
         <button class="btn_cadastrar" type="submit">Cadastrar</button>
