@@ -13,6 +13,11 @@
     box-sizing: border-box;
 }
 
+.erro {
+    color: #fc1e8b;
+    font-size: 2rem;
+}
+
 html {
     font-family: 'Titillium Web', sans-serif;
 
@@ -100,7 +105,7 @@ header {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 2.2rem;
+    font-size: 1.9rem;
     line-height: 2.6rem;
     text-transform: uppercase;
 }
@@ -109,9 +114,28 @@ header {
     color: white;
 }
 
+.boasvindas {
+    color: #4892d3;
+    margin-left: 20px;
+}
+
+.logout {
+    height: 40px;
+    width: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(128, 4, 4);
+    border-radius: 15px;
+
+    font-size: 1.8rem;
+}
+
 .nav_header a:hover{
     color: rgb(148, 148, 148);
-    font-size: 2.3rem;
+    font-size: 2rem;
 }
 
 .burguer {
@@ -658,7 +682,19 @@ hr {
     height: 289px;
 }
 
+@media (max-width: 1200px) {
+    .nav_header {
+        font-size: 1.7rem;
+    }
+
+    .logout {
+        height: 35px;
+        width: 114px;
+    }
+}
+
 @media (max-width: 1154px) {
+
     .ez_img {
         right: 20px;
     }
@@ -668,6 +704,19 @@ hr {
 @media (max-width: 1054px) {
     html {
         font-size: 50%;
+    }
+
+    #logo {
+        width: 218px;
+    }
+
+    .nav_header {
+        font-size: 2rem;
+        max-width: 78.3rem;
+    }
+
+    .nav_header a:hover {
+        font-size: 2.1rem;
     }
 
     .banner {
@@ -766,8 +815,14 @@ hr {
     }
 
     .nav_header {
-        width: 60%;
-        max-width: 79.3rem;
+        width: 69%;
+        max-width: 90.3rem;
+
+        font-size: 2.3rem;
+    }
+
+    .nav_header a:hover {
+        font-size: 2.4rem;
     }
 
     .times_ao_vivo {
@@ -802,12 +857,25 @@ hr {
 }
 
 @media (max-width: 880px) {
-    .nav_header {
-        width: 57%;
+
+    .boasvindas {
+        margin-left: 0;
     }
 
     .times_ao_vivo2 {
         display: none;
+    }
+}
+
+@media (max-width: 814px) {
+    #logo {
+        width: 190px;
+    }
+
+    .nav_header {
+        width: 72%;
+        max-width: 90.3rem;
+        font-size: 2.3rem;
     }
 }
 

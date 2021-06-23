@@ -18,10 +18,18 @@
 
             <nav class="nav_header">
                 <a asp-area="" asp-controller="Home" asp-action="Index" target="_parent">início</a>
-                <a asp-area="" asp-controller="Home" asp-action="Index" target="_parent">horários</a>
-                <a asp-area="" asp-controller="Home" asp-action="Index" target="_parent">campeonato</a>
-                <a href="">classificações</a>
-                <a asp-area="" asp-controller="Home" asp-action="Index" target="_parent">notícias</a>
+                <a href="#proximos_jogos" target="_parent">horários</a>
+                <a href="#como_participar" target="_parent">campeonato</a>
+                <a href="#noticias" target="_parent">notícias</a>
+
+                @if (ViewBag.UserName != null)
+                {
+                    <span class="boasvindas">Olá @ViewBag.UserName</span>
+                    <a class="logout" asp-area="" asp-controller="Login" asp-action="Logout" target="_parent">logout</a>
+                }else{
+                    <a asp-area="" asp-controller="Login" asp-action="Index" target="_parent">login</a>
+                }
+                
             </nav>
 
             <div class="burguer">
@@ -46,7 +54,7 @@
                     <ul class="lista_footer">
                         <li><a href="">Regras de utilização</a></li>
                         <li><a href="">Suport</a></li>
-                        <li><a href="">Central de ajuda</a></li>
+                        <li><a href="">Central de ajuda</a></li>  
                         <li><a href="">Mande nos uma mensagem</a></li>
                     </ul>
                 </div>
@@ -54,9 +62,9 @@
                     <span class="span_grande_footer">Páginas</span>
                     <ul class="lista_footer">
                         <li><a asp-area="" asp-controller="Home" asp-action="Index" target="_parent">Ínicio</a></li>
-                        <li><a href="../index.html#como_participar" target="_parent">Campeonatos</a></li>
+                        <li><a href="#como_participar" target="_parent">Campeonatos</a></li>
                         <li><a href="">Classificações</a></li>
-                        <li><a href="../index.html#noticias" target="_parent">Notícias</a></li>
+                        <li><a href="#noticias" target="_parent">Notícias</a></li>
                         <li><a href="../cadastro_jogador.html" target="_parent">Login/Cadastro</a></li>
                     </ul>
                 </div>
