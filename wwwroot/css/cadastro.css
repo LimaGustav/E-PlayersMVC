@@ -226,6 +226,10 @@ table {
 }
 
 @media (max-width: 430px) {
+    .cadastro_banner h1 {
+        font-size: 35px;
+    }
+
     .tr1 {
         width: 67%;
     }
