@@ -24,7 +24,7 @@ namespace E_PlayersMVC.Models
         }
 
         public string PrepararJogador(Jogador j) {
-            return $"{j.IdEquipe};{j.NomeJogador};{j.IdEquipe};{j.Email};{j.Senha}";
+            return $"{j.IdJogador};{j.NomeJogador};{j.IdEquipe};{j.Email};{j.Senha}";
         }
         public void Criar(Jogador j)
         {
